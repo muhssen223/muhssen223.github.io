@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --hover-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-main: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%); 
+} 
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --hover-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-main: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%); 
+}
+
+.attribution{
+    font-weight: 800;
+    font-size: 30px;
+    height: 25px;
+    margin-bottom: 14px;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+body {
+    font-size: 14px;
+    background: var(--bg);
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+}
+.container1{
+    width: 80%;
+}
+                        /* header headline */
+
+header section:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom:  40px;
+    @media (min-width: 600px)
+}
+
+.header-headline ,.header-headline-1{
+    font-weight: 700;
+    font-size:  32px;
+    color: var(--text-main);
+    
+    
+
+}
+.header-2{
+font-weight: 700;
+font-size: 16px;
+color: var(--text-secondary);
+
+}
+
+
+                         /* dark/light mode toggle*/
+
+.header-toggler{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--text-main);
+    
+}
+
+.toggler{
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    background: hsla(231, 17%, 78%, 0);
+    border-radius: 40px;
+    cursor:pointer;
+    background-image: linear-gradient(45deg, #378fe6, #3eda82, #ffeb3b, #14ffe9);
+    filter: blur(0.6px);
+    
+    
+    
+
+}
+
+.toggler-circle {
+    margin: 7px 7px;
+    width: 31px;
+    height: 31px;
+    border-radius: 70px;
+    background: var(--bg);
+    transition: 0.3s;
+
+}
+
+/* social media cards section styling */
+
+
+header section:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.header-card{
+    padding: 30px 55px;
+    background-color: var(--card-bg);
+    text-align: center;
+    border-radius: 14px;
+
+}
+
+.padding-left{
+    padding-left: 0;
+}
+
+.padding-right{
+    padding-right: 0;
+}
+
+.header-card-1{
+    margin: 10px 3 10px 3;
+    color: var(--subtext);
+    font: weight:700;
+}
+
+.header-card-1-name{
+    font-size: 16px;
+
+}
+
+.header-card-2{
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--header-text);
+}
+
+.header-card-3{
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+.header-card-4{
+    margin-top: 20px;
+}
+.facebook {
+    border-top: 5px solid hsl(229, 77%, 37%);
+    background-image: linear-gradient(to right, #ddd5d5, #001cbb );
+    
+}
+
+.twitter {
+    border-top: 5px solid hsl(208, 89%, 53%);
+    background-image: linear-gradient(to right, #e7dede, #0AA8FC );
+    filter: opacity(0.8);
+
+}
+
+.instagram {
+    background-image: linear-gradient(to right, #fbc468, #df4996);
+    opacity: 0.8;
+    border-top: 5px solid hsl(318, 91%, 43%);
+}
+.youtube{
+    border-top: 5px solid hsl(348, 97%, 39%);
+    background-image: linear-gradient(to right, #e7dede, #FC0A0A);
+    filter: opacity(0.8);
+}
+
+.overview__title {
+    color: var(--text-secondary);
+  font-size: 32px;
+  margin: 10px 0 24px;
+  margin: 20px;
+  font-weight: 700;
+
+ }
+  
+
+
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px; }
+    @media (min-width: 600px) {
+      .overview-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 22px; } }
+    @media (min-width: 900px) {
+      .overview-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 22px; } }
+  
+  .overview-card {
+    background: var(--card-bg);
+    margin-bottom: 22px;
+    padding: 22px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .overview-card:hover {
+      background: var(--hover-bg); }
+  
+  .overview__number {
+    text-align: left; }
+    .overview__number p {
+      margin-bottom: 18px;
+      line-height: 24px;
+      font-weight: bold;
+      color: var(--text-secondary); }
+    .overview__number h2 {
+      font-size: 24px; }
+  
+  .overview__percents {
+    text-align: right; }
+    .overview__percents i:first-child {
+      font-size: 24px;
+      margin-bottom: 18px; }
+    .overview__percents p {
+      font-size: 12px;
+      padding-top: 4px;
+      font-weight: bold;
+      height: 12px; }
+  
+  .attribution {
+    font-size: 11px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0; }
+    .attribution a {
+      color: var(--text-secondary); 
+    }
+
+
+  
